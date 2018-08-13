@@ -1,0 +1,22 @@
+{
+  "name": "websocket-server",
+  "version": "1.0.0",
+  "description": "Websocket server for Yoctu services",
+  "main": "app.js",
+  "dependencies": {
+    "config": "^1.27.0",
+    "redis": "^2.8.0",
+    "socket.io": "^2.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Jerome Schaeffer <j.schaeffer@flash-global.net>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yoctu/websocket-server.git"
+  }
+}

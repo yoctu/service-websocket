@@ -1,0 +1,14 @@
+{
+    "services": [
+        {"service": "logger", "channel": "logger.notification.*", "entity": "notification"},
+        {"service": "audit", "channel": "audit.event.*", "entity": "event"}
+    ],
+    "application": {
+        "port": 3000
+    },
+    "redis": {
+        "port": 6379,
+        "host": "localhost",
+        "password": ""
+    }
+}
