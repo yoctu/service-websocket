@@ -1,0 +1,6 @@
+service-websocket (0.0.1) unstable; urgency=low
+
+  * Generate .deb
+
+ -- Dzove855 <dzove855@yoctu.com>  Tue, 28 Aug 2018 17:01:38 +0200
+

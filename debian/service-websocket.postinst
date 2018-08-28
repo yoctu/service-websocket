@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# @lav: !!! DO NOT FORGET, SCRIPT IS RUN WITH set -e !!!
+
+PACKAGENAME="service-websocket"
+
+if [ -f "/tmp/$PACKAGENAME.deb.configure" ]
+then 
+    . /tmp/$PACKAGENAME.deb.configure
+fi
+
+function supervisorRun ()
+{
+    supervisorctl reread
+    supervisorctl update
+    supervisorctl restart all
+}
+
+function configure ()
+{
+    supervisorRun
+}
+
+case "$1" in
+    configure)          configure                       ;;
+    abort-upgrade|abort-remove|abort-deconfigure)       ;;
+esac
+
+if [[ -f "/tmp/$PACKAGENAME.deb.configure" ]]
+then 
+    rm /tmp/$PACKAGENAME.deb.configure
+fi

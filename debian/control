@@ -1,0 +1,11 @@
+Source: service-websocket
+Section: utils
+Maintainer: Dzove855 <dzove855@yoctu.com>
+Build-Depends: debhelper
+Standards-Version: 0.0.1
+
+Package: service-websocket
+Architecture: all
+Priority: optional
+Depends: nodejs, redis-server, supervisor, esm
+Description: Yoctu Websocket Service

@@ -1,0 +1,6 @@
+app.js                                  usr/share/yoctu/service-websocket/
+LICENSE					usr/share/yoctu/service-websocket/
+package.json				usr/share/yoctu/service-websocket/
+package-lock.json			usr/share/yoctu/service-websocket/
+README.md                               usr/share/service-websocket/doc/
+dist/supervisor/service-websocket.conf  etc/supervisor/conf.d/
