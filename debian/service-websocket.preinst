@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# @lav: !!! DO NOT FORGET, SCRIPT IS RUN WITH set -e !!!
+
+# Does Directory exit? Get infos if it is install etc...
+# Generate a tmp file
+
+PACKAGENAME="service-websocket"
+
