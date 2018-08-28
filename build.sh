@@ -51,7 +51,6 @@ ppaurl="https://ppa.yoctu.com"
 filerurl="http://filer.test.flash-global.net"
 term="automate@term.test.flash-global.net"
 
-
 IFS=/ read refs heads branch <<<$CPHP_GIT_REF
 
 trap '_quit 2 "An Error occured while running script"' ERR
@@ -82,15 +81,15 @@ mv /tmp/$project-changelog debian/changelog
 _notify "Fetched changelog"
 
 _notify "Setup Github"
-sudo -s curl -o /bin/git-to-deb -O -L $ppaurl/git-to-deb 
-sudo chmod +x /bin/git-to-deb
+sudo -s curl -o /bin/git-to-deb.sh -O -L $ppaurl/git-to-deb.sh 
+sudo chmod +x /bin/git-to-deb.sh
 
 git config --global user.email "git@yoctu.com"
 git config --global user.name "git"
 _notify "Setup done"
 
 _notify "Build package"
-git-to-deb -U build -u $branch >/dev/null 
+git-to-deb.sh -i >/dev/null
 
 filer-client.sh -U $filerurl -c MISCELLANEOUS -n "$project-changelog" -f debian/changelog -C "need=Changelog file for $project" -m "text/plain" -X update -u $fileuuid
 _notify "Build done"
