@@ -2,7 +2,7 @@
     "services": [
         {"service": "logger", "channel": "logger.notification.*", "entity": "notification"},
         {"service": "audit", "channel": "audit.event.*", "entity": "event"},
-        {"service": "notification", "channel": "notification.*", "entity": "notifications"},
+        {"service": "notification", "channel": "notification.*", "entity": "notification"},
         {"service": "cast", "channel": "cast.*", "entity": "cast"}
     ],
     "application": {
