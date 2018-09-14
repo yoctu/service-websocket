@@ -6,6 +6,15 @@ const redis = require('redis'),
 
 let redisClient = redis.createClient(config.get('redis'));
 
+redisClient.on('reconnecting', (e) => console.error("reconnecting... attempt " + e.attempt));
+redisClient.on('error', (e) => {
+    if (e.errno === 'ECONNREFUSED') {
+        console.error(`Connection failed on ${e.address}:${e.port}`)
+    } else {
+        console.error(e)
+    }
+});
+
 config.get('services').forEach(e => {
     redisClient.psubscribe(e.channel);
 });
