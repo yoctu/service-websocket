@@ -18,6 +18,11 @@ function supervisorRun ()
 
 function configure ()
 {
+    if dpkg -l ufw &>/dev/null && ufw status &>/dev/null
+    then
+        ufw allow 3000
+    fi
+
     supervisorRun
 }
 
