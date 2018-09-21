@@ -3,14 +3,21 @@
         {"service": "logger", "channel": "logger.notification.*", "entity": "notification"},
         {"service": "audit", "channel": "audit.event.*", "entity": "event"},
         {"service": "notification", "channel": "notification.*", "entity": "notification"},
-        {"service": "cast", "channel": "cast.*", "entity": "cast"}
+        {"service": "cast", "channel": "cast.*", "entity": "cast"},
+        {"service": "mailer", "channel": "mailer.*", "entity": "mailer"},
+        {"service": "payment", "channel": "payment.*", "entity": "payment"},
+        {"service": "translate", "channel": "translate.*", "entity": "translate"},
+        {"service": "filer", "channel": "filer.*", "entity": "filer"},
+        {"service": "chat", "channel": "chat.*", "entity": "chat"},
+        {"service": "pdf-gen", "channel": "pdf-gen.*", "entity": "pdf-gen"},
+        {"service": "shaq", "channel": "shaq.*", "entity": "shaq"}
     ],
     "application": {
         "port": 3000
     },
     "redis": {
         "port": 6379,
-        "host": "localhost",
+        "host": "redis",
         "password": ""
     }
 }
