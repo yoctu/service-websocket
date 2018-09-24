@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  service_websocket:
+    build:
+      context: .
+    container_name: "service_websocket"
+    ports:
+      - "3000:3000"
+    networks:
+      - service_websocket
+
+  redis:
+    image: redis:3.2-alpine
+    container_name: "service_websocket_redis"
+    ports:
+      - "6379:6379"
+    networks:
+      - service_websocket
+
+networks:
+  service_websocket:
