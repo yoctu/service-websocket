@@ -9,6 +9,7 @@
         {"service": "translate", "channel": "translate.*", "entity": "translate"},
         {"service": "filer", "channel": "filer.*", "entity": "filer"},
         {"service": "chat", "channel": "chat.*", "entity": "chat"},
+        {"service": "bid", "channel": "bid.*", "entity": "bid"},
         {"service": "pdf-gen", "channel": "pdf-gen.*", "entity": "pdf-gen"},
         {"service": "shaq", "channel": "shaq.*", "entity": "shaq"}
     ],
